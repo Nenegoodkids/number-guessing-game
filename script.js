@@ -74,5 +74,14 @@ document.addEventListener("DOMContentLoaded", function () {
     this.select();
   });
 });
+document.addEventListener("DOMContentLoaded", function () {
+  document
+    .getElementById("guessInput")
+    .addEventListener("keypress", function (event) {
+      if (event.key === "Enter") {
+        checkGuess();
+      }
+    });
+});
 // เริ่มเกมเมื่อโหลดหน้า
 window.addEventListener("load", initializeGame);
