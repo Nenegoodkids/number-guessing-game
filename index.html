@@ -18,7 +18,7 @@
           <div class="card shadow">
             <div class="card-body">
               <h1 class="card-title text-center">เกมส์ทายตัวเลข</h1>
-              <p class="text-center text-muted">ทายตัวเลขตั้งแต่ 1 ถึง 100</p>
+              <p class="text-center text-muted" id="jodlabel">ทายตัวเลขตั้งแต่ 1 ถึง 100</p>
               <div class="mb-3">
                 <label for="guessInput" class="form-label">พิมพ์ตัวเลข:</label>
                 <input
@@ -36,7 +36,9 @@
                   เริ่มใหม่
                 </button>
                 <!-- difficulty -->
-                <select id="difficultySelect" class="form-select">
+                <select id="difficultySelect" class="form-select"
+                onchange="resetGame()"
+                    >
                   <option value="easy" selected>1-10</option>
                   <option value="medium">1-50</option>
                   <option value="hard">1-100</option>

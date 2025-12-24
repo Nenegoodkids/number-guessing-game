@@ -26,6 +26,7 @@ function initializeGame() {
   secretNumber = Math.floor(Math.random() * max) + min;
   attemptCount = 0;
   updateDisplay();
+  document.getElementById("jodlabel").innerHTML = `ทายตัวเลขตั้งแต่ ${min} ถึง ${max}`;
 }
 // ฟังก์ชันตรวจสอบการทาย
 function checkGuess() {
