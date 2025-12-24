@@ -32,7 +32,7 @@ function checkGuess() {
  `;
     return;
   }
-  attemptCount++;
+  attemptCount++; // เพิ่มตรงนี้
   if (guessValue === secretNumber) {
     resultContainer.innerHTML = `
  <div class="alert alert-success" role="alert">
@@ -59,10 +59,9 @@ function checkGuess() {
 }
 // ฟังก์ชันอัปเดตจํานวนครั้ง
 function updateDisplay() {
-  const attemptsContainer = document.getElementById("attemptsContainer");
-  attemptsContainer.textContent = `ทายแล้ว: ${attemptCount} ครั้ง`;
-}
-// ฟังก์ชันเริ่มเกมใหม่
+ const attemptsContainer = document.getElementById("attemptsContainer");
+ attemptsContainer.textContent = `ทายแล้ว: ${attemptCount} ครั้ง`;
+}// ฟังก์ชันเริ่มเกมใหม่
 function resetGame() {
   initializeGame();
   document.getElementById("resultContainer").innerHTML = "";
